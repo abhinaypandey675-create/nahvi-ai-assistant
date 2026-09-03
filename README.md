@@ -1,4 +1,4 @@
-AHVI - AI Desktop Assistant
+NAHVI - AI Desktop Assistant
 A futuristic Windows desktop AI assistant combining conversational AI, voice interaction, automation, memory, file utilities, and system control.
 
 NAHVI is a desktop AI assistant built with React, Electron, and Node.js. It connects AI models with practical desktop capabilities so natural-language requests can trigger useful local workflows.
