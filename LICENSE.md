@@ -1,117 +1,114 @@
-# NAHVI - AI Desktop Assistant
+NAHVI PROPRIETARY EVALUATION LICENSE
 
-> A futuristic Windows desktop AI assistant combining conversational AI, voice interaction, automation, memory, file utilities, and system control.
+Copyright (c) 2026 Abhinay Pandey. All Rights Reserved.
 
-NAHVI is a desktop AI assistant built with React, Electron, and Node.js. It connects AI models with practical desktop capabilities so natural-language requests can trigger useful local workflows.
 
-## What is NAHVI?
+1. COPYRIGHT NOTICE
 
-NAHVI brings together:
+This software, including its source code, architecture, documentation,
+designs, workflows, AI integrations, automation logic, user interface,
+and related assets (collectively, the "Software"), is the intellectual
+property of Abhinay Pandey.
 
-- Conversational AI
-- Multiple AI providers
-- Voice interaction infrastructure
-- Windows desktop automation
-- Application launching
-- File search and file handling
-- Document reading
-- Local runtime memory
-- Notes generation
-- Intent detection
-- Command parsing
-- Utility commands
-- Futuristic desktop interface
 
-## Core Capabilities
+2. EVALUATION LICENSE
 
-### AI Integration
+Permission is granted to individuals and organizations to view and
+evaluate the Software for:
 
-NAHVI is designed to work with multiple AI providers.
+- Educational purposes
+- Recruitment and hiring evaluation
+- Technical review
+- Demonstration and portfolio review
 
-Configured providers include:
+This permission is limited to evaluation and does not transfer
+ownership of the Software.
 
-- Groq
-- Google Gemini
 
-API credentials are loaded through environment variables and should never be committed to the repository.
+3. RESTRICTIONS
 
-### Voice Interaction
+You may NOT, without prior written permission from the copyright owner:
 
-NAHVI includes voice input and output infrastructure for hands-free assistant interaction.
+- Copy or redistribute substantial portions of the Software.
+- Publish or mirror the Software as your own project.
+- Modify or create derivative works for public or commercial use.
+- Use the Software or its components for commercial purposes.
+- Sell, sublicense, rent, or repackage the Software.
+- Remove copyright, attribution, or license notices.
+- Use the Software to create a competing commercial product.
 
-Some local runtime components are environment-dependent and are intentionally excluded from the public source repository.
 
-### Desktop Automation
+4. RECRUITER AND TECHNICAL REVIEWER PERMISSION
 
-The backend contains modules for Windows desktop actions such as:
+Recruiters, hiring managers, interviewers, and technical reviewers
+may inspect the repository, review the source code, run the Software
+for evaluation, and discuss its implementation during an educational,
+recruitment, hiring, or technical review process.
 
-- Mouse movement and clicking
-- Keyboard interaction
-- PowerShell and system actions
-- Application launching
-- Desktop control workflows
+This permission does not grant ownership, redistribution rights,
+commercial rights, or permission to create derivative works.
 
-### Application Launcher
 
-NAHVI can interact with local applications through its application-launching capabilities, allowing natural-language commands to trigger supported desktop applications.
+5. PERSONAL AND INTERNAL EVALUATION
 
-### File and Document Utilities
+Individuals may run the Software locally for personal evaluation,
+learning, testing, and technical assessment, provided that such use
+does not violate the restrictions in this license.
 
-NAHVI includes utilities for:
 
-- File search
-- File handling
-- File organization
-- Document reading
+6. THIRD-PARTY COMPONENTS
 
-These modules allow the assistant to work with files and documents as part of desktop workflows.
+The Software may integrate with third-party libraries, frameworks,
+services, APIs, AI providers, or other technologies that are subject
+to their own licenses and terms.
 
-### Memory
+This license applies only to components owned by Abhinay Pandey and
+does not replace or override the licenses of third-party components.
 
-NAHVI includes local runtime memory for maintaining assistant-related information during use.
 
-Runtime memory and personal conversation data are intentionally excluded from the public repository.
+7. NO WARRANTY
 
-### Notes and Utilities
+The Software is provided "AS IS" and without warranties of any kind,
+whether express or implied.
 
-Additional backend capabilities include:
+The author makes no guarantee regarding the availability, reliability,
+accuracy, security, or suitability of the Software for any particular
+purpose.
 
-- Note generation
-- Calculator functionality
-- Command parsing
-- Intent detection
-- Response modes
-- Utility workflows
 
----
+8. LIMITATION OF LIABILITY
 
-## Architecture
+To the maximum extent permitted by applicable law, the copyright owner
+shall not be liable for any direct, indirect, incidental, special,
+consequential, or other damages arising from the use of, inability to
+use, modification of, or distribution of the Software.
 
-```text
-+------------------------------+
-|        NAHVI Frontend        |
-|        React + Vite          |
-+---------------+--------------+
-                |
-                v
-+------------------------------+
-|      Electron Desktop Shell  |
-+---------------+--------------+
-                |
-                v
-+------------------------------+
-|        Node.js Backend       |
-|                              |
-| Command Parser               |
-| Intent Detection             |
-| AI Providers                 |
-| Desktop Control              |
-| App Launcher                 |
-| File Utilities               |
-| Document Reader              |
-| Memory / Notes / Utilities   |
-+---------------+--------------+
-        +-------+-------+
-        |               |
-        v               v
-   Groq / Gemini   Windows / Local
+
+9. COMMERCIAL LICENSING
+
+Commercial use, enterprise deployment, redistribution, sublicensing,
+partnerships, integration into commercial products, or other uses
+outside the permissions granted by this license require prior written
+permission from the copyright owner.
+
+Commercial licensing terms may be provided separately by the copyright
+owner.
+
+
+10. CHANGES TO THE LICENSE
+
+The copyright owner reserves the right to update or replace the terms
+of this license for future versions of the Software.
+
+Existing versions remain governed by the license included with the
+corresponding version unless otherwise agreed in writing.
+
+
+11. CONTACT
+
+Owner: Abhinay Pandey
+Project: NAHVI
+Repository: nahvi-ai-assistant
+
+
+Copyright (c) 2026 Abhinay Pandey. All Rights Reserved.****
