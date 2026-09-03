@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050816;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.nahvi-root {
+  position: relative;        /* ✅ FIX 1: contains the absolute bg-grid */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #101c44 0%, #050816 70%);
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;                /* ✅ explicit bottom layer */
+  pointer-events: none;      /* ✅ correct, keep this */
+  background-image:
+    linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.nahvi-title {
+  position: relative;        /* ✅ FIX 2: activates z-index */
+  z-index: 2;
+  font-size: 60px;
+  color: cyan;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px cyan;
+}
+
+.reactor-wrapper {
+  position: relative;        /* ✅ FIX 2 */
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.reactor {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid cyan;
+  box-shadow:
+    0 0 20px cyan,
+    0 0 50px cyan;
+  animation: pulse 2s infinite;
+}
+
+.chat-box {
+  position: relative;        /* ✅ FIX 2 */
+  z-index: 2;
+  width: 700px;
+  height: 400px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid cyan;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.user {
+  background: rgba(0,255,255,0.2);
+  margin-left: auto;
+  text-align: right;
+}
+
+.nahvi {
+  background: rgba(255,255,255,0.08);
+}
+
+.message-header {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: cyan;
+}
+
+.message-text {
+  font-size: 16px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  height: 55px;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid cyan;
+  border-radius: 12px;
+  color: white;
+  padding: 0 15px;
+  outline: none;
+  font-size: 16px;
+}
+
+.send-btn,
+.mic-btn {
+  width: 80px;
+  border: none;
+  border-radius: 12px;
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  position: relative;        /* ✅ FIX 2 */
+  z-index: 2;
+  margin-top: 20px;
+  color: cyan;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nahvi-ultimate",
+  "version": "1.0.0",
+  "main": "electron.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.NAHVI.ultimate",
+    "productName": "NAHVI Ultimate",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "files": [
+      "electron.cjs",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.0.0"
+  }
+}

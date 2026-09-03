@@ -1,0 +1,115 @@
+# =========================
+# Secrets & environment
+# =========================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# =========================
+# Python
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Node / frontend
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# =========================
+# Databases & local data
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+data/
+database/
+db/
+*.db-journal
+
+# =========================
+# Logs & runtime output
+# =========================
+logs/
+*.log
+*.out
+*.tmp
+tmp/
+temp/
+
+# =========================
+# Private / personal data
+# =========================
+profile.json
+profiles/
+candidate/
+private/
+personal/
+resumes/
+cover_letters/
+applications/
+application_answers*
+application_questionnaire*
+
+# =========================
+# Browser / session data
+# =========================
+cookies/
+sessions/
+browser_data/
+playwright/.cache/
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Generated / scratch files
+# =========================
+*.bak
+*.backup
+*.old
+*_replacement.py
+*_scratch.*
+debug_*.txt
+test_output.*
+screenshots/
+recordings/
+
+# =========================
+# Bundled local runtime binaries
+# =========================
+espeak-ng-data/
+pkgconfig/
+vc/
+espeak-ng.dll
+libtashkeel_model.ort
+onnxruntime.dll
+onnxruntime_providers_shared.dll
+piper.exe
+piper_phonemize.dll
+# Local archives and Windows shortcuts
+*.zip
+*.lnk
+# Nahvi runtime memory
+backend/memory.json
