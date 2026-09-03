@@ -1,91 +1,117 @@
-NAHVI PROPRIETARY EVALUATION LICENSE
+# NAHVI - AI Desktop Assistant
 
+> A futuristic Windows desktop AI assistant combining conversational AI, voice interaction, automation, memory, file utilities, and system control.
 
+NAHVI is a desktop AI assistant built with React, Electron, and Node.js. It connects AI models with practical desktop capabilities so natural-language requests can trigger useful local workflows.
 
-Copyright © 2026 Abhinay Pandey. All Rights Reserved.
+## What is NAHVI?
 
+NAHVI brings together:
 
+- Conversational AI
+- Multiple AI providers
+- Voice interaction infrastructure
+- Windows desktop automation
+- Application launching
+- File search and file handling
+- Document reading
+- Local runtime memory
+- Notes generation
+- Intent detection
+- Command parsing
+- Utility commands
+- Futuristic desktop interface
 
-Copyright Notice
+## Core Capabilities
 
+### AI Integration
 
+NAHVI is designed to work with multiple AI providers.
 
-This software, including its source code, architecture, documentation,
+Configured providers include:
 
-designs, workflows, AI integrations, automation logic, user interface,
+- Groq
+- Google Gemini
 
-and related assets (collectively, the "Software"), is the intellectual
+API credentials are loaded through environment variables and should never be committed to the repository.
 
-property of Abhinay Pandey.
+### Voice Interaction
 
+NAHVI includes voice input and output infrastructure for hands-free assistant interaction.
 
+Some local runtime components are environment-dependent and are intentionally excluded from the public source repository.
 
-License Terms
+### Desktop Automation
 
+The backend contains modules for Windows desktop actions such as:
 
+- Mouse movement and clicking
+- Keyboard interaction
+- PowerShell and system actions
+- Application launching
+- Desktop control workflows
 
-Permission is granted only to view this repository and evaluate the
+### Application Launcher
 
-Software for educational, recruitment, or demonstration purposes.
+NAHVI can interact with local applications through its application-launching capabilities, allowing natural-language commands to trigger supported desktop applications.
 
+### File and Document Utilities
 
+NAHVI includes utilities for:
 
-You may NOT:
+- File search
+- File handling
+- File organization
+- Document reading
 
+These modules allow the assistant to work with files and documents as part of desktop workflows.
 
+### Memory
 
-\- Copy or redistribute substantial portions of the Software.
+NAHVI includes local runtime memory for maintaining assistant-related information during use.
 
-\- Modify or create derivative works without written permission.
+Runtime memory and personal conversation data are intentionally excluded from the public repository.
 
-\- Use the Software or its components for commercial purposes.
+### Notes and Utilities
 
-\- Sell, sublicense, or repackage any part of the Software.
+Additional backend capabilities include:
 
-\- Remove copyright or attribution notices.
+- Note generation
+- Calculator functionality
+- Command parsing
+- Intent detection
+- Response modes
+- Utility workflows
 
+---
 
+## Architecture
 
-Recruiter \& Reviewer Permission
-
-
-
-Recruiters, hiring managers, and technical reviewers may inspect the
-
-repository, run the Software for evaluation, and discuss its
-
-implementation during the hiring process.
-
-
-
-This permission does not grant ownership or redistribution rights.
-
-
-
-No Warranty
-
-
-
-The Software is provided "AS IS", without warranties of any kind.
-
-The author is not liable for damages arising from its use.
-
-
-
-Commercial Licensing
-
-
-
-For commercial use, partnerships, enterprise licensing, or
-
-redistribution, written permission from the copyright owner is required.
-
-
-
-Contact
-
-
-
-Owner: Abhinay Pandey
-
-Project: NAHVI
+```text
++------------------------------+
+|        NAHVI Frontend        |
+|        React + Vite          |
++---------------+--------------+
+                |
+                v
++------------------------------+
+|      Electron Desktop Shell  |
++---------------+--------------+
+                |
+                v
++------------------------------+
+|        Node.js Backend       |
+|                              |
+| Command Parser               |
+| Intent Detection             |
+| AI Providers                 |
+| Desktop Control              |
+| App Launcher                 |
+| File Utilities               |
+| Document Reader              |
+| Memory / Notes / Utilities   |
++---------------+--------------+
+        +-------+-------+
+        |               |
+        v               v
+   Groq / Gemini   Windows / Local
